@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Object - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>examples/chunked_upload.rb
+    <li>examples/cli_example.rb
+    <li>examples/copy_between_accounts.rb
+    <li>examples/dropbox_controller.rb
+    <li>examples/oauth1_upgrade.rb
+    <li>examples/run_patched
+    <li>examples/search_cache.rb
+    <li>examples/web_file_browser.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">BasicObject
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Rack::Utils</span>
+  
+  
+  </ul>
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-apply_delta">#apply_delta</a>
+    
+    <li ><a href="#method-i-command_copy">#command_copy</a>
+    
+    <li ><a href="#method-i-command_find">#command_find</a>
+    
+    <li ><a href="#method-i-command_link">#command_link</a>
+    
+    <li ><a href="#method-i-command_list">#command_list</a>
+    
+    <li ><a href="#method-i-command_reset">#command_reset</a>
+    
+    <li ><a href="#method-i-command_update">#command_update</a>
+    
+    <li ><a href="#method-i-get_dropbox_client">#get_dropbox_client</a>
+    
+    <li ><a href="#method-i-get_or_create_child">#get_or_create_child</a>
+    
+    <li ><a href="#method-i-get_web_auth">#get_web_auth</a>
+    
+    <li ><a href="#method-i-html_page">#html_page</a>
+    
+    <li ><a href="#method-i-load_state">#load_state</a>
+    
+    <li ><a href="#method-i-main">#main</a>
+    
+    <li ><a href="#method-i-map_hash_values">#map_hash_values</a>
+    
+    <li ><a href="#method-i-render_file">#render_file</a>
+    
+    <li ><a href="#method-i-render_folder">#render_folder</a>
+    
+    <li ><a href="#method-i-save_state">#save_state</a>
+    
+    <li ><a href="#method-i-search_tree">#search_tree</a>
+    
+    <li ><a href="#method-i-split_path">#split_path</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/trusted-certs_crt.html">trusted-certs.crt</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DropboxAuthError.html">DropboxAuthError</a>
+  
+    <li><a href="./DropboxCLI.html">DropboxCLI</a>
+  
+    <li><a href="./DropboxClient.html">DropboxClient</a>
+  
+    <li><a href="./DropboxClient/ChunkedUploader.html">DropboxClient::ChunkedUploader</a>
+  
+    <li><a href="./DropboxController.html">DropboxController</a>
+  
+    <li><a href="./DropboxError.html">DropboxError</a>
+  
+    <li><a href="./DropboxNotModified.html">DropboxNotModified</a>
+  
+    <li><a href="./DropboxOAuth2Flow.html">DropboxOAuth2Flow</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadRequestError.html">DropboxOAuth2Flow::BadRequestError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadStateError.html">DropboxOAuth2Flow::BadStateError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/CsrfError.html">DropboxOAuth2Flow::CsrfError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/NotApprovedError.html">DropboxOAuth2Flow::NotApprovedError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/ProviderError.html">DropboxOAuth2Flow::ProviderError</a>
+  
+    <li><a href="./DropboxOAuth2FlowNoRedirect.html">DropboxOAuth2FlowNoRedirect</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rack.html">Rack</a>
+  
+    <li><a href="./Rack/Session.html">Rack::Session</a>
+  
+    <li><a href="./SDKTest.html">SDKTest</a>
+  
+    <li><a href="./SSLTest.html">SSLTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Object</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="APP_KEY">APP_KEY
+        
+        <dd class="description"><p>You must use your Dropbox App key and secret to use the API. Find this at
+<a href="https://www.dropbox.com/developers">www.dropbox.com/developers</a></p>
+        
+      
+        <dt id="APP_SECRET">APP_SECRET
+        
+        <dd class="description">
+        
+      
+        <dt id="STATE_FILE">STATE_FILE
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-apply_delta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_delta</span><span
+            class="method-args">(root, e)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="apply_delta-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 191</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_delta</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">e</span>)
+  <span class="ruby-identifier">path</span>, <span class="ruby-identifier">metadata</span> = <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">branch</span>, <span class="ruby-identifier">leaf</span> = <span class="ruby-identifier">split_path</span>(<span class="ruby-identifier">path</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">metadata</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;+ #{path}&quot;</span>
+    <span class="ruby-comment"># Traverse down the tree until we find the parent folder of the entry</span>
+    <span class="ruby-comment"># we want to add.  Create any missing folders along the way.</span>
+    <span class="ruby-identifier">children</span> = <span class="ruby-identifier">root</span>
+    <span class="ruby-identifier">branch</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">node</span> = <span class="ruby-identifier">get_or_create_child</span>(<span class="ruby-identifier">children</span>, <span class="ruby-identifier">part</span>)
+      <span class="ruby-comment"># If there&#39;s no folder here, make an empty one.</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">folder?</span>
+        <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span> = {}
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">children</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Create the file/folder.</span>
+    <span class="ruby-identifier">node</span> = <span class="ruby-identifier">get_or_create_child</span>(<span class="ruby-identifier">children</span>, <span class="ruby-identifier">leaf</span>)
+    <span class="ruby-identifier">node</span>.<span class="ruby-identifier">path</span> = <span class="ruby-identifier">metadata</span>[<span class="ruby-string">&#39;path&#39;</span>]  <span class="ruby-comment"># Save the un-lower-cased path.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">metadata</span>[<span class="ruby-string">&#39;is_dir&#39;</span>]
+      <span class="ruby-comment"># Only create a folder if there isn&#39;t one there already.</span>
+      <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span> = {} <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">folder?</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span> = <span class="ruby-identifier">metadata</span>[<span class="ruby-string">&#39;size&#39;</span>], <span class="ruby-identifier">metadata</span>[<span class="ruby-string">&#39;modified&#39;</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;- #{path}&quot;</span>
+    <span class="ruby-comment"># Traverse down the tree until we find the parent of the entry we</span>
+    <span class="ruby-comment"># want to delete.</span>
+    <span class="ruby-identifier">children</span> = <span class="ruby-identifier">root</span>
+    <span class="ruby-identifier">missing_parent</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">branch</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">part</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">node</span> = <span class="ruby-identifier">children</span>[<span class="ruby-identifier">part</span>]
+      <span class="ruby-comment"># If one of the parent folders is missing, then we&#39;re done.</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">folder?</span>
+        <span class="ruby-identifier">missing_parent</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">children</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># If we made it all the way, delete the file/folder.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">missing_parent</span>
+      <span class="ruby-identifier">children</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">leaf</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- apply_delta-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- apply_delta-method -->
+
+    
+      <div id="method-i-command_copy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_copy</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_copy-source">
+            <pre><span class="ruby-comment"># File examples/copy_between_accounts.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_copy</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">3</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: \&quot;copy\&quot; takes exactly two arguments&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">load_state</span>()
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">keys</span>().<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: You can&#39;t use the copy command until at least two users have linked&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">from</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[&#39;&quot;]/</span>,<span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-identifier">to</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[&#39;&quot;]/</span>,<span class="ruby-string">&#39;&#39;</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">to</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;:&#39;</span>) <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">from</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;:&#39;</span>)
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;ERROR: Ill-formated paths. Run #{prog_name} without arugments to see documentation.&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">from_uid</span>, <span class="ruby-identifier">from_path</span> = <span class="ruby-identifier">from</span>.<span class="ruby-identifier">split</span> <span class="ruby-string">&quot;:&quot;</span>
+  <span class="ruby-identifier">to_uid</span>, <span class="ruby-identifier">to_path</span> = <span class="ruby-identifier">to</span>.<span class="ruby-identifier">split</span> <span class="ruby-string">&quot;:&quot;</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">to_uid</span>) <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">from_uid</span>)
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;ERROR: Those UIDs have not linked.  Run #{prog_name} list to see linked UIDs.&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">from_client</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">state</span>[<span class="ruby-identifier">from_uid</span>][<span class="ruby-string">&#39;access_token&#39;</span>])
+  <span class="ruby-identifier">to_client</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">state</span>[<span class="ruby-identifier">to_uid</span>][<span class="ruby-string">&#39;access_token&#39;</span>])
+
+  <span class="ruby-comment">#Create a copy ref under the identity of the from user</span>
+  <span class="ruby-identifier">copy_ref</span> = <span class="ruby-identifier">from_client</span>.<span class="ruby-identifier">create_copy_ref</span>(<span class="ruby-identifier">from_path</span>)[<span class="ruby-string">&#39;copy_ref&#39;</span>]
+
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-identifier">to_client</span>.<span class="ruby-identifier">add_copy_ref</span>(<span class="ruby-identifier">to_path</span>, <span class="ruby-identifier">copy_ref</span>)
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;File successly copied from #{state[from_uid][&#39;display_name&#39;]} to #{state[to_uid][&#39;display_name&#39;]}!&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;The file now exists at #{metadata[&#39;path&#39;]}&quot;</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_copy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_copy-method -->
+
+    
+      <div id="method-i-command_find" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_find</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_find-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 254</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_find</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">term</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">term</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">warn</span>(<span class="ruby-string">&quot;ERROR: \&quot;find\&quot; takes either zero or one arguments.&quot;</span>)
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">load_state</span>()
+  <span class="ruby-identifier">results</span> = []
+  <span class="ruby-identifier">search_tree</span>(<span class="ruby-identifier">results</span>, <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;tree&#39;</span>], <span class="ruby-identifier">term</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">r</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">results</span>
+    <span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;#{r}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;[Matches: #{results.size}]&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_find-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_find-method -->
+
+    
+      <div id="method-i-command_link" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_link</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_link-source">
+            <pre><span class="ruby-comment"># File examples/copy_between_accounts.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_link</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: \&quot;link\&quot; doesn&#39;t take any arguments&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">web_auth</span> = <span class="ruby-constant">DropboxOAuth2FlowNoRedirect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">APP_KEY</span>, <span class="ruby-constant">APP_SECRET</span>)
+  <span class="ruby-identifier">authorize_url</span> = <span class="ruby-identifier">web_auth</span>.<span class="ruby-identifier">start</span>()
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;1. Go to: #{authorize_url}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;2. Click \&quot;Allow\&quot; (you might have to log in first).&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;3. Copy the authorization code.&quot;</span>
+
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Enter the authorization code here: &quot;</span>
+  <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">flush</span>
+  <span class="ruby-identifier">auth_code</span> = <span class="ruby-constant">STDIN</span>.<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+
+  <span class="ruby-identifier">access_token</span>, <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">web_auth</span>.<span class="ruby-identifier">finish</span>(<span class="ruby-identifier">auth_code</span>)
+
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">access_token</span>)
+  <span class="ruby-identifier">account_info</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">account_info</span>()
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Link successful. #{account_info[&#39;display_name&#39;]} is uid #{account_info[&#39;uid&#39;]} &quot;</span>
+
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">load_state</span>()
+  <span class="ruby-identifier">state</span>[<span class="ruby-identifier">account_info</span>[<span class="ruby-string">&#39;uid&#39;</span>]] = {
+          <span class="ruby-string">&#39;access_token&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">access_token</span>,
+          <span class="ruby-string">&#39;display_name&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">account_info</span>[<span class="ruby-string">&#39;display_name&#39;</span>],
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">account_info</span>[<span class="ruby-string">&#39;team&#39;</span>]
+    <span class="ruby-identifier">state</span>[<span class="ruby-identifier">account_info</span>[<span class="ruby-string">&#39;uid&#39;</span>]][<span class="ruby-string">&#39;team_name&#39;</span>] = <span class="ruby-identifier">account_info</span>[<span class="ruby-string">&#39;team&#39;</span>][<span class="ruby-string">&#39;name&#39;</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">save_state</span>(<span class="ruby-identifier">state</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_link-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_link-method -->
+
+    
+      <div id="method-i-command_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_list</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_list-source">
+            <pre><span class="ruby-comment"># File examples/copy_between_accounts.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_list</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: \&quot;list\&quot; doesn&#39;t take any arguments&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">load_state</span>()
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">keys</span>()
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>[<span class="ruby-identifier">e</span>][<span class="ruby-string">&#39;team_name&#39;</span>]
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{state[e][&#39;display_name&#39;]} (#{state[e][&#39;team_name&#39;]}) is uid #{e}&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{state[e][&#39;display_name&#39;]} is uid #{e}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_list-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_list-method -->
+
+    
+      <div id="method-i-command_reset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_reset</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_reset-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 274</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_reset</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">warn</span>(<span class="ruby-string">&quot;ERROR: \&quot;reset\&quot; takes no arguments.&quot;</span>)
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Delete cursor, empty tree.</span>
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">load_state</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;cursor&#39;</span>)
+    <span class="ruby-identifier">state</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;cursor&#39;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;tree&#39;</span>] = {}
+  <span class="ruby-identifier">save_state</span>(<span class="ruby-identifier">state</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_reset-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_reset-method -->
+
+    
+      <div id="method-i-command_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_update</span><span
+            class="method-args">(args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_update-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_update</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">page_limit</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">page_limit</span> = <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: \&quot;update\&quot; takes either zero or one argument.&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Load state</span>
+  <span class="ruby-identifier">state</span> = <span class="ruby-identifier">load_state</span>()
+  <span class="ruby-identifier">access_token</span> = <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;access_token&#39;</span>]
+  <span class="ruby-identifier">cursor</span> = <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;cursor&#39;</span>]
+  <span class="ruby-identifier">tree</span> = <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;tree&#39;</span>]
+
+  <span class="ruby-comment"># Connect to Dropbox</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">access_token</span>)
+
+  <span class="ruby-identifier">page</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">changed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">while</span> (<span class="ruby-identifier">page_limit</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">or</span> (<span class="ruby-identifier">page</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">page_limit</span>)
+    <span class="ruby-comment"># Get /delta results from Dropbox</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">delta</span>(<span class="ruby-identifier">cursor</span>)
+    <span class="ruby-identifier">page</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;reset&#39;</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;reset&#39;</span>
+      <span class="ruby-identifier">changed</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">tree</span> = {}
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">cursor</span> = <span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;cursor&#39;</span>]
+    <span class="ruby-comment"># Apply the entries one by one to our cached tree.</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">delta_entry</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;entries&#39;</span>]
+      <span class="ruby-identifier">changed</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">apply_delta</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">delta_entry</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">cursor</span> = <span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;cursor&#39;</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;has_more&#39;</span>]
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Save state</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">changed</span>
+    <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;cursor&#39;</span>] = <span class="ruby-identifier">cursor</span>
+    <span class="ruby-identifier">state</span>[<span class="ruby-string">&#39;tree&#39;</span>] = <span class="ruby-identifier">tree</span>
+    <span class="ruby-identifier">save_state</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;No updates.&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_update-method -->
+
+    
+      <div id="method-i-get_dropbox_client" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_dropbox_client</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>If we already have an authorized DropboxSession, returns a <a
+href="DropboxClient.html">DropboxClient</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_dropbox_client-source">
+            <pre><span class="ruby-comment"># File examples/web_file_browser.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_dropbox_client</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:access_token</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:access_token</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_dropbox_client-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_dropbox_client-method -->
+
+    
+      <div id="method-i-get_or_create_child" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_or_create_child</span><span
+            class="method-args">(children, name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_or_create_child-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_or_create_child</span>(<span class="ruby-identifier">children</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">child</span> = <span class="ruby-identifier">children</span>[<span class="ruby-identifier">name</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">children</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">child</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">child</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_or_create_child-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_or_create_child-method -->
+
+    
+      <div id="method-i-get_web_auth" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_web_auth</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <hr style="height: 10px">
+
+<p>OAuth stuff</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_web_auth-source">
+            <pre><span class="ruby-comment"># File examples/web_file_browser.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_web_auth</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">DropboxOAuth2Flow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">APP_KEY</span>, <span class="ruby-constant">APP_SECRET</span>, <span class="ruby-identifier">url</span>(<span class="ruby-string">&#39;/dropbox-auth-finish&#39;</span>),
+                 <span class="ruby-identifier">session</span>, <span class="ruby-value">:dropbox_auth_csrf_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_web_auth-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_web_auth-method -->
+
+    
+      <div id="method-i-html_page" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">html_page</span><span
+            class="method-args">(title, body='')</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <hr style="height: 10px">
+          
+          
+
+          
+          <div class="method-source-code" id="html_page-source">
+            <pre><span class="ruby-comment"># File examples/web_file_browser.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">html_page</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">body</span>=<span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-string">&quot;&lt;html&gt;&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;&lt;head&gt;&lt;title&gt;#{h title}&lt;/title&gt;&lt;/head&gt;&quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-node">&quot;&lt;body&gt;&lt;h1&gt;#{h title}&lt;/h1&gt;#{body}&lt;/body&gt;&quot;</span> <span class="ruby-operator">+</span>
+  <span class="ruby-string">&quot;&lt;/html&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- html_page-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- html_page-method -->
+
+    
+      <div id="method-i-load_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_state</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load_state-source">
+            <pre><span class="ruby-comment"># File examples/copy_between_accounts.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_state</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-constant">STATE_FILE</span>)
+    <span class="ruby-keyword">return</span> {}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">STATE_FILE</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- load_state-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- load_state-method -->
+
+    
+      <div id="method-i-main" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">main</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="main-source">
+            <pre><span class="ruby-comment"># File examples/chunked_upload.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">main</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">APP_KEY</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">or</span> <span class="ruby-constant">APP_SECRET</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: Set your APP_KEY and APP_SECRET at the top of search_cache.rb&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">prog_name</span> = <span class="ruby-keyword">__FILE__</span>
+  <span class="ruby-identifier">args</span> = <span class="ruby-constant">ARGV</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">warn</span>(<span class="ruby-string">&quot;Usage:\n&quot;</span>)
+    <span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;   #{prog_name} &lt;local-file-path&gt; &lt;dropbox-target-path&gt; &lt;chunk-size-in-bytes&gt;&quot;</span>)
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">3</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;ERROR: expecting exactly three arguments.  Run with no arguments for help.&quot;</span>
+    <span class="ruby-identifier">exit</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">web_auth</span> = <span class="ruby-constant">DropboxOAuth2FlowNoRedirect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">APP_KEY</span>, <span class="ruby-constant">APP_SECRET</span>)
+  <span class="ruby-identifier">authorize_url</span> = <span class="ruby-identifier">web_auth</span>.<span class="ruby-identifier">start</span>()
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;1. Go to: #{authorize_url}&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;2. Click \&quot;Allow\&quot; (you might have to log in first).&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;3. Copy the authorization code.&quot;</span>
+
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Enter the authorization code here: &quot;</span>
+  <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">flush</span>
+  <span class="ruby-identifier">auth_code</span> = <span class="ruby-constant">STDIN</span>.<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+
+  <span class="ruby-identifier">access_token</span>, <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">web_auth</span>.<span class="ruby-identifier">finish</span>(<span class="ruby-identifier">auth_code</span>)
+
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">access_token</span>)
+
+  <span class="ruby-identifier">local_file_path</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">dropbox_target_path</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-identifier">chunk_size</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_i</span>
+
+  <span class="ruby-comment"># Upload the file</span>
+  <span class="ruby-identifier">local_file_size</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">local_file_path</span>)
+  <span class="ruby-identifier">uploader</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">get_chunked_uploader</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">local_file_path</span>, <span class="ruby-string">&quot;r&quot;</span>), <span class="ruby-identifier">local_file_size</span>)
+  <span class="ruby-identifier">retries</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Uploading...&quot;</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">total_size</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">upload</span>(<span class="ruby-identifier">chunk_size</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">retries</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;- Error uploading, giving up.&quot;</span>
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;- Error uploading, trying again...&quot;</span>
+      <span class="ruby-identifier">retries</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Finishing upload...&quot;</span>
+  <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">finish</span>(<span class="ruby-identifier">dropbox_target_path</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Done.&quot;</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- main-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- main-method -->
+
+    
+      <div id="method-i-map_hash_values" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">map_hash_values</span><span
+            class="method-args">(h) { |v| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Run a mapping function over every value in a Hash, returning a new Hash.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="map_hash_values-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">map_hash_values</span>(<span class="ruby-identifier">h</span>)
+  <span class="ruby-identifier">new</span> = {}
+  <span class="ruby-identifier">h</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">new</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-keyword">yield</span> <span class="ruby-identifier">v</span> }
+  <span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- map_hash_values-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- map_hash_values-method -->
+
+    
+      <div id="method-i-render_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_file</span><span
+            class="method-args">(client, entry)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_file-source">
+            <pre><span class="ruby-comment"># File examples/web_file_browser.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_file</span>(<span class="ruby-identifier">client</span>, <span class="ruby-identifier">entry</span>)
+  <span class="ruby-comment"># Just dump out metadata hash</span>
+  <span class="ruby-identifier">html_page</span> <span class="ruby-node">&quot;File: #{entry[&#39;path&#39;]}&quot;</span>, <span class="ruby-node">&quot;&lt;pre&gt;#{h entry.pretty_inspect}&lt;/pre&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- render_file-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- render_file-method -->
+
+    
+      <div id="method-i-render_folder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">render_folder</span><span
+            class="method-args">(client, entry)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="render_folder-source">
+            <pre><span class="ruby-comment"># File examples/web_file_browser.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">render_folder</span>(<span class="ruby-identifier">client</span>, <span class="ruby-identifier">entry</span>)
+  <span class="ruby-comment"># Provide an upload form (so the user can add files to this folder)</span>
+  <span class="ruby-identifier">out</span> = <span class="ruby-string">&quot;&lt;form action=&#39;/upload&#39; method=&#39;post&#39; enctype=&#39;multipart/form-data&#39;&gt;&quot;</span>
+  <span class="ruby-identifier">out</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;label for=&#39;file&#39;&gt;Upload file:&lt;/label&gt; &lt;input name=&#39;file&#39; type=&#39;file&#39;/&gt;&quot;</span>
+  <span class="ruby-identifier">out</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;input type=&#39;submit&#39; value=&#39;Upload&#39;/&gt;&quot;</span>
+  <span class="ruby-identifier">out</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;input name=&#39;folder&#39; type=&#39;hidden&#39; value=&#39;#{h entry[&#39;path&#39;]}&#39;/&gt;&quot;</span>
+  <span class="ruby-identifier">out</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;/form&gt;&quot;</span>  <span class="ruby-comment"># TODO: Add a token to counter CSRF attacks.</span>
+  <span class="ruby-comment"># List of folder contents</span>
+  <span class="ruby-identifier">entry</span>[<span class="ruby-string">&#39;contents&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">cp</span> = <span class="ruby-identifier">child</span>[<span class="ruby-string">&#39;path&#39;</span>]      <span class="ruby-comment"># child path</span>
+    <span class="ruby-identifier">cn</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">cp</span>)  <span class="ruby-comment"># child name</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">child</span>[<span class="ruby-string">&#39;is_dir&#39;</span>]) <span class="ruby-keyword">then</span> <span class="ruby-identifier">cn</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">out</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;div&gt;&lt;a style=&#39;text-decoration: none&#39; href=&#39;/?path=#{h cp}&#39;&gt;#{h cn}&lt;/a&gt;&lt;/div&gt;&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">html_page</span> <span class="ruby-node">&quot;Folder: #{entry[&#39;path&#39;]}&quot;</span>, <span class="ruby-identifier">out</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- render_folder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- render_folder-method -->
+
+    
+      <div id="method-i-save_state" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_state</span><span
+            class="method-args">(state)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save_state-source">
+            <pre><span class="ruby-comment"># File examples/copy_between_accounts.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_state</span>(<span class="ruby-identifier">state</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">STATE_FILE</span>,<span class="ruby-string">&quot;w&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-constant">JSON</span>.<span class="ruby-identifier">pretty_generate</span>(<span class="ruby-identifier">state</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_state-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_state-method -->
+
+    
+      <div id="method-i-search_tree" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search_tree</span><span
+            class="method-args">(results, tree, term)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Recursively search &#39;tree&#39; for files that contain the string in
+&#39;term&#39;. Print out any matches.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="search_tree-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search_tree</span>(<span class="ruby-identifier">results</span>, <span class="ruby-identifier">tree</span>, <span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name_lc</span>, <span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">path</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">path</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">term</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">folder?</span>
+        <span class="ruby-identifier">results</span>.<span class="ruby-identifier">push</span>(<span class="ruby-node">&quot;#{path}&quot;</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">size</span>, <span class="ruby-identifier">modified</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span>
+        <span class="ruby-identifier">results</span>.<span class="ruby-identifier">push</span>(<span class="ruby-node">&quot;#{path}  (#{size}, #{modified})&quot;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">folder?</span>
+      <span class="ruby-identifier">search_tree</span>(<span class="ruby-identifier">results</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">content</span>, <span class="ruby-identifier">term</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- search_tree-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- search_tree-method -->
+
+    
+      <div id="method-i-split_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">split_path</span><span
+            class="method-args">(path)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="split_path-source">
+            <pre><span class="ruby-comment"># File examples/search_cache.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">split_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">bad</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">parts</span> = <span class="ruby-identifier">path</span>.<span class="ruby-identifier">split</span> <span class="ruby-string">&#39;/&#39;</span>
+  [<span class="ruby-identifier">parts</span>, <span class="ruby-identifier">parts</span>.<span class="ruby-identifier">pop</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- split_path-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- split_path-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

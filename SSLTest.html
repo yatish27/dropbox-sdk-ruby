@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class SSLTest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/ssl_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Test::Unit::TestCase
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-teardown">#teardown</a>
+    
+    <li ><a href="#method-i-test_dropbox_connection">#test_dropbox_connection</a>
+    
+    <li ><a href="#method-i-test_hostname_validation">#test_hostname_validation</a>
+    
+    <li ><a href="#method-i-test_invalid_certificate">#test_invalid_certificate</a>
+    
+    <li ><a href="#method-i-test_valid_certificate">#test_valid_certificate</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/trusted-certs_crt.html">trusted-certs.crt</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DropboxAuthError.html">DropboxAuthError</a>
+  
+    <li><a href="./DropboxCLI.html">DropboxCLI</a>
+  
+    <li><a href="./DropboxClient.html">DropboxClient</a>
+  
+    <li><a href="./DropboxClient/ChunkedUploader.html">DropboxClient::ChunkedUploader</a>
+  
+    <li><a href="./DropboxController.html">DropboxController</a>
+  
+    <li><a href="./DropboxError.html">DropboxError</a>
+  
+    <li><a href="./DropboxNotModified.html">DropboxNotModified</a>
+  
+    <li><a href="./DropboxOAuth2Flow.html">DropboxOAuth2Flow</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadRequestError.html">DropboxOAuth2Flow::BadRequestError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadStateError.html">DropboxOAuth2Flow::BadStateError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/CsrfError.html">DropboxOAuth2Flow::CsrfError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/NotApprovedError.html">DropboxOAuth2Flow::NotApprovedError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/ProviderError.html">DropboxOAuth2Flow::ProviderError</a>
+  
+    <li><a href="./DropboxOAuth2FlowNoRedirect.html">DropboxOAuth2FlowNoRedirect</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rack.html">Rack</a>
+  
+    <li><a href="./Rack/Session.html">Rack::Session</a>
+  
+    <li><a href="./SDKTest.html">SDKTest</a>
+  
+    <li><a href="./SSLTest.html">SSLTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class SSLTest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Called before every test method runs. Can be used to set up fixture
+information.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/ssl_test.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-ivar">@client</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;DROPBOX_RUBY_SDK_ACCESS_TOKEN&#39;</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File test/ssl_test.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- teardown-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- teardown-method -->
+
+    
+      <div id="method-i-test_dropbox_connection" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_dropbox_connection</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connection to Dropbox API Should not raise exceptions</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_dropbox_connection-source">
+            <pre><span class="ruby-comment"># File test/ssl_test.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_dropbox_connection</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">remove_const</span>(<span class="ruby-value">:API_SERVER</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-string">&quot;API_SERVER&quot;</span>, <span class="ruby-string">&quot;api.dropbox.com&quot;</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-string">&#39;/&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_dropbox_connection-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_dropbox_connection-method -->
+
+    
+      <div id="method-i-test_hostname_validation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_hostname_validation</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connection to a host that presents a certificate for invalid hostname
+Should raise <a href="DropboxError.html">DropboxError</a> exception of the
+type &#39;SSL error&#39;</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_hostname_validation-source">
+            <pre><span class="ruby-comment"># File test/ssl_test.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_hostname_validation</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">remove_const</span>(<span class="ruby-value">:API_SERVER</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-string">&quot;API_SERVER&quot;</span>, <span class="ruby-string">&quot;www.v.dropbox.com&quot;</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-string">&#39;/&#39;</span>)
+  <span class="ruby-keyword">rescue</span>  <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert</span>(<span class="ruby-node">&quot;#{e}&quot;</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;SSL error&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_hostname_validation-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_hostname_validation-method -->
+
+    
+      <div id="method-i-test_invalid_certificate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_invalid_certificate</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connection to a host with a disallowed certificate Should raise <a
+href="DropboxError.html">DropboxError</a> exception of the type &#39;SSL
+error&#39;</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_invalid_certificate-source">
+            <pre><span class="ruby-comment"># File test/ssl_test.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_invalid_certificate</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">remove_const</span>(<span class="ruby-value">:API_SERVER</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-string">&quot;API_SERVER&quot;</span>, <span class="ruby-string">&quot;twitter.com&quot;</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-string">&#39;/&#39;</span>)
+  <span class="ruby-keyword">rescue</span>  <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert</span>(<span class="ruby-node">&quot;#{e}&quot;</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;SSL error&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_invalid_certificate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_invalid_certificate-method -->
+
+    
+      <div id="method-i-test_valid_certificate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_valid_certificate</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connection to a host with an allowed certificate Should raise <a
+href="DropboxError.html">DropboxError</a> exception but not of the type
+&#39;SSL error&#39;</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_valid_certificate-source">
+            <pre><span class="ruby-comment"># File test/ssl_test.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_valid_certificate</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">remove_const</span>(<span class="ruby-value">:API_SERVER</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Dropbox</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-string">&quot;API_SERVER&quot;</span>, <span class="ruby-string">&quot;www.digicert.com&quot;</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-string">&#39;/&#39;</span>)
+  <span class="ruby-keyword">rescue</span>  <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span>(<span class="ruby-node">&quot;#{e}&quot;</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;SSL error&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_valid_certificate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_valid_certificate-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

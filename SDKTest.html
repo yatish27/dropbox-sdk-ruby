@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class SDKTest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/sdk_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Test::Unit::TestCase
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-assert_file">#assert_file</a>
+    
+    <li ><a href="#method-i-assert_get">#assert_get</a>
+    
+    <li ><a href="#method-i-assert_metadata">#assert_metadata</a>
+    
+    <li ><a href="#method-i-assert_put">#assert_put</a>
+    
+    <li ><a href="#method-i-hash_has">#hash_has</a>
+    
+    <li ><a href="#method-i-open_binary">#open_binary</a>
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-teardown">#teardown</a>
+    
+    <li ><a href="#method-i-test_chunked_upload">#test_chunked_upload</a>
+    
+    <li ><a href="#method-i-test_copy">#test_copy</a>
+    
+    <li ><a href="#method-i-test_copy_ref">#test_copy_ref</a>
+    
+    <li ><a href="#method-i-test_create_folder">#test_create_folder</a>
+    
+    <li ><a href="#method-i-test_delete">#test_delete</a>
+    
+    <li ><a href="#method-i-test_delta">#test_delta</a>
+    
+    <li ><a href="#method-i-test_gets">#test_gets</a>
+    
+    <li ><a href="#method-i-test_metadatas">#test_metadatas</a>
+    
+    <li ><a href="#method-i-test_move">#test_move</a>
+    
+    <li ><a href="#method-i-test_puts">#test_puts</a>
+    
+    <li ><a href="#method-i-test_revisions_restore">#test_revisions_restore</a>
+    
+    <li ><a href="#method-i-test_search">#test_search</a>
+    
+    <li ><a href="#method-i-test_share">#test_share</a>
+    
+    <li ><a href="#method-i-test_stream">#test_stream</a>
+    
+    <li ><a href="#method-i-upload">#upload</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/trusted-certs_crt.html">trusted-certs.crt</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DropboxAuthError.html">DropboxAuthError</a>
+  
+    <li><a href="./DropboxCLI.html">DropboxCLI</a>
+  
+    <li><a href="./DropboxClient.html">DropboxClient</a>
+  
+    <li><a href="./DropboxClient/ChunkedUploader.html">DropboxClient::ChunkedUploader</a>
+  
+    <li><a href="./DropboxController.html">DropboxController</a>
+  
+    <li><a href="./DropboxError.html">DropboxError</a>
+  
+    <li><a href="./DropboxNotModified.html">DropboxNotModified</a>
+  
+    <li><a href="./DropboxOAuth2Flow.html">DropboxOAuth2Flow</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadRequestError.html">DropboxOAuth2Flow::BadRequestError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadStateError.html">DropboxOAuth2Flow::BadStateError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/CsrfError.html">DropboxOAuth2Flow::CsrfError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/NotApprovedError.html">DropboxOAuth2Flow::NotApprovedError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/ProviderError.html">DropboxOAuth2Flow::ProviderError</a>
+  
+    <li><a href="./DropboxOAuth2FlowNoRedirect.html">DropboxOAuth2FlowNoRedirect</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rack.html">Rack</a>
+  
+    <li><a href="./Rack/Session.html">Rack::Session</a>
+  
+    <li><a href="./SDKTest.html">SDKTest</a>
+  
+    <li><a href="./SSLTest.html">SSLTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class SDKTest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-assert_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assert_file</span><span
+            class="method-args">(file, metadata, options={}, *more)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="assert_file-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-operator">*</span><span class="ruby-identifier">more</span>)
+  <span class="ruby-identifier">hash_has</span>(<span class="ruby-identifier">metadata</span>,
+    {
+      <span class="ruby-string">&quot;bytes&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">size</span>(<span class="ruby-identifier">file</span>),
+      <span class="ruby-string">&quot;is_dir&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>),
+    <span class="ruby-operator">*</span><span class="ruby-identifier">more</span>.<span class="ruby-identifier">concat</span>([<span class="ruby-string">&#39;revision&#39;</span>, <span class="ruby-string">&#39;rev&#39;</span>, <span class="ruby-string">&#39;size&#39;</span>, <span class="ruby-string">&#39;modified&#39;</span>])
+  )
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- assert_file-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- assert_file-method -->
+
+    
+      <div id="method-i-assert_get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assert_get</span><span
+            class="method-args">(file, path)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="assert_get-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_get</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">file_path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;get&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">file_path</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get_file</span>(<span class="ruby-identifier">file_path</span>)
+  <span class="ruby-identifier">local</span> = <span class="ruby-identifier">open_binary</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">local</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">local</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- assert_get-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- assert_get-method -->
+
+    
+      <div id="method-i-assert_metadata" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assert_metadata</span><span
+            class="method-args">(file, path)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="assert_metadata-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_metadata</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">file_path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;meta&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">file_path</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">file_path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">result</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">file_path</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- assert_metadata-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- assert_metadata-method -->
+
+    
+      <div id="method-i-assert_put" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assert_put</span><span
+            class="method-args">(file, path)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="assert_put-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_put</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">file_path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;put&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put_file</span>(<span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&quot;rb&quot;</span>))
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">result</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">file_path</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- assert_put-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- assert_put-method -->
+
+    
+      <div id="method-i-hash_has" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">hash_has</span><span
+            class="method-args">(dict, options={}, *more)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="hash_has-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hash_has</span>(<span class="ruby-identifier">dict</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-operator">*</span><span class="ruby-identifier">more</span>)
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">key</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">more</span>
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">dict</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">dict</span>[<span class="ruby-identifier">key</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- hash_has-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- hash_has-method -->
+
+    
+      <div id="method-i-open_binary" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">open_binary</span><span
+            class="method-args">(filename)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="open_binary-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_binary</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-string">&#39;rb&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- open_binary-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- open_binary-method -->
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Called before every test method runs. Can be used to set up fixture
+information.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-ivar">@client</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;DROPBOX_RUBY_SDK_ACCESS_TOKEN&#39;</span>])
+
+  <span class="ruby-ivar">@foo</span> = <span class="ruby-string">&quot;testfiles/foo.txt&quot;</span>
+  <span class="ruby-ivar">@frog</span> = <span class="ruby-string">&quot;testfiles/Costa Rican Frog.jpg&quot;</span>
+  <span class="ruby-ivar">@song</span> = <span class="ruby-string">&quot;testfiles/dropbox_song.mp3&quot;</span>
+
+  <span class="ruby-ivar">@test_dir</span> = <span class="ruby-string">&quot;/Ruby SDK Tests/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H.%M.%S&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@test_dir</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_delete</span>(<span class="ruby-ivar">@test_dir</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- teardown-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- teardown-method -->
+
+    
+      <div id="method-i-test_chunked_upload" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_chunked_upload</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_chunked_upload-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_chunked_upload</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;chunked_upload_file.txt&quot;</span>
+  <span class="ruby-identifier">size</span> = <span class="ruby-value">1024</span><span class="ruby-operator">*</span><span class="ruby-value">1024</span><span class="ruby-operator">*</span><span class="ruby-value">10</span>
+  <span class="ruby-identifier">chunk_size</span> = <span class="ruby-value">4</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span> <span class="ruby-operator">*</span> <span class="ruby-value">1102</span>
+
+
+  <span class="ruby-identifier">random_data</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">random_bytes</span>(<span class="ruby-identifier">n</span>=<span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">uploader</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get_chunked_uploader</span>(<span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">random_data</span>), <span class="ruby-identifier">size</span>)
+  <span class="ruby-identifier">error_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">size</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">error_count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">upload</span> = <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">upload</span>(<span class="ruby-identifier">chunk_size</span> = <span class="ruby-identifier">chunk_size</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-identifier">error_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">finish</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">downloaded</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get_file</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">size</span>, <span class="ruby-identifier">downloaded</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">random_data</span>, <span class="ruby-identifier">downloaded</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_chunked_upload-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_chunked_upload-method -->
+
+    
+      <div id="method-i-test_copy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_copy</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_copy-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_copy</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;copyfoo.txt&quot;</span>
+  <span class="ruby-identifier">path2</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;copyfoo2.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_copy</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">path2</span>)
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">metadata2</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path2</span>)
+
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata2</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path2</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_copy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_copy-method -->
+
+    
+      <div id="method-i-test_copy_ref" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_copy_ref</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_copy_ref-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_copy_ref</span>
+
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;foo_copy_ref.txt&quot;</span>
+  <span class="ruby-identifier">path2</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;foo_copy_ref_target.txt&quot;</span>
+
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">copy_ref</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">create_copy_ref</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">hash_has</span>(<span class="ruby-identifier">copy_ref</span>, {},
+    <span class="ruby-string">&quot;expires&quot;</span>,
+    <span class="ruby-string">&quot;copy_ref&quot;</span>
+  )
+
+  <span class="ruby-identifier">copied</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">add_copy_ref</span>(<span class="ruby-identifier">path2</span>, <span class="ruby-identifier">copy_ref</span>[<span class="ruby-string">&quot;copy_ref&quot;</span>])
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path2</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path2</span>)
+  <span class="ruby-identifier">copied_foo</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get_file</span>(<span class="ruby-identifier">path2</span>)
+  <span class="ruby-identifier">local_foo</span> = <span class="ruby-identifier">open</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-string">&quot;rb&quot;</span>).<span class="ruby-identifier">gets</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">copied_foo</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">local_foo</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">copied_foo</span>, <span class="ruby-identifier">local_foo</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_copy_ref-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_copy_ref-method -->
+
+    
+      <div id="method-i-test_create_folder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_create_folder</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_create_folder-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_create_folder</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;new_folder&quot;</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_create_folder</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;size&#39;</span>], <span class="ruby-string">&#39;0 bytes&#39;</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;bytes&#39;</span>], <span class="ruby-value">0</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;path&#39;</span>], <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>[<span class="ruby-string">&#39;is_dir&#39;</span>], <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_create_folder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_create_folder-method -->
+
+    
+      <div id="method-i-test_delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_delete</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_delete-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;delfoo.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>)
+
+  <span class="ruby-identifier">del_metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_delete</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">del_metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;is_deleted&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-string">&quot;bytes&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_delete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_delete-method -->
+
+    
+      <div id="method-i-test_delta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_delta</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_delta-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delta</span>
+  <span class="ruby-identifier">prefix</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;delta&quot;</span>
+
+  <span class="ruby-identifier">a</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/a.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">a</span>)
+  <span class="ruby-identifier">b</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/b.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">b</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/c&quot;</span>
+  <span class="ruby-identifier">c_1</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/c/1.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">c_1</span>)
+  <span class="ruby-identifier">c_2</span> = <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/c/2.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">c_2</span>)
+
+  <span class="ruby-identifier">prefix_lc</span> = <span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">downcase</span>
+  <span class="ruby-identifier">c_lc</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">downcase</span>
+
+  <span class="ruby-comment"># /delta on everything</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span> [<span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">c</span>, <span class="ruby-identifier">c_1</span>, <span class="ruby-identifier">c_2</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">downcase</span>}
+  <span class="ruby-identifier">entries</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">cursor</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">delta</span>(<span class="ruby-identifier">cursor</span>)
+    <span class="ruby-identifier">entries</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;reset&#39;</span>]
+    <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;entries&#39;</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">path_lc</span>, <span class="ruby-identifier">md</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">path_lc</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">prefix_lc</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/&#39;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">path_lc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">prefix_lc</span>
+        <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">md</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)  <span class="ruby-comment"># we should never get deletes under &#39;prefix&#39;</span>
+        <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">path_lc</span>
+      <span class="ruby-keyword">end</span>
+    }
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;has_more&#39;</span>]
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">cursor</span> = <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;cursor&#39;</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expected</span>, <span class="ruby-identifier">entries</span>)
+
+  <span class="ruby-comment"># /delta where path_prefix=c</span>
+  <span class="ruby-identifier">expected</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span> [<span class="ruby-identifier">c</span>, <span class="ruby-identifier">c_1</span>, <span class="ruby-identifier">c_2</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">downcase</span>}
+  <span class="ruby-identifier">entries</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">cursor</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">r</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">delta</span>(<span class="ruby-identifier">cursor</span>, <span class="ruby-identifier">c</span>)
+    <span class="ruby-identifier">entries</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;reset&#39;</span>]
+    <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;entries&#39;</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">path_lc</span>, <span class="ruby-identifier">md</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">assert</span> <span class="ruby-identifier">path_lc</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">c_lc</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/&#39;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">path_lc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">c_lc</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">md</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)  <span class="ruby-comment"># we should never get deletes</span>
+      <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">path_lc</span>
+    }
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;has_more&#39;</span>]
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">cursor</span> = <span class="ruby-identifier">r</span>[<span class="ruby-string">&#39;cursor&#39;</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expected</span>, <span class="ruby-identifier">entries</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_delta-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_delta-method -->
+
+    
+      <div id="method-i-test_gets" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_gets</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fake test</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_gets-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_gets</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_get</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">file_path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;get&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-identifier">upload</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">file_path</span>)
+    <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get_file</span>(<span class="ruby-identifier">file_path</span>)
+    <span class="ruby-identifier">local</span> = <span class="ruby-identifier">open_binary</span>(<span class="ruby-identifier">file</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">local</span>.<span class="ruby-identifier">length</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">local</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_get</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-string">&quot;foo.txt&quot;</span>)
+  <span class="ruby-identifier">assert_get</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-string">&quot;frog.txt&quot;</span>)
+  <span class="ruby-identifier">assert_get</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-string">&quot;song.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_gets-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_gets-method -->
+
+    
+      <div id="method-i-test_metadatas" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_metadatas</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_metadatas-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_metadatas</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_metadata</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">file_path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;meta&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-identifier">upload</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">file_path</span>)
+    <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">file_path</span>)
+    <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">result</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">file_path</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_metadata</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-string">&quot;foo.txt&quot;</span>)
+  <span class="ruby-identifier">assert_metadata</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-string">&quot;frog.txt&quot;</span>)
+  <span class="ruby-identifier">assert_metadata</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-string">&quot;song.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_metadatas-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_metadatas-method -->
+
+    
+      <div id="method-i-test_move" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_move</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_move-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_move</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;movefoo.txt&quot;</span>
+  <span class="ruby-identifier">path2</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;movefoo2.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_move</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">path2</span>)
+
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;is_deleted&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-string">&quot;bytes&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path2</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path2</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_move-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_move-method -->
+
+    
+      <div id="method-i-test_puts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_puts</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_puts-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_puts</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_put</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">file_path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;put&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put_file</span>(<span class="ruby-identifier">file_path</span>, <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-string">&quot;rb&quot;</span>))
+    <span class="ruby-identifier">assert_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">result</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">file_path</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_put</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-string">&quot;foo.txt&quot;</span>)
+  <span class="ruby-identifier">assert_put</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-string">&quot;frog.jpg&quot;</span>)
+  <span class="ruby-identifier">assert_put</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-string">&quot;song.mp3&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_puts-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_puts-method -->
+
+    
+      <div id="method-i-test_revisions_restore" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_revisions_restore</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_revisions_restore-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_revisions_restore</span>
+
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;foo_revs.txt&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">overwrite</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">overwrite</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">revs</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">revisions</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;mime_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/plain&quot;</span>)
+
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">revs</span>.<span class="ruby-identifier">length</span>, <span class="ruby-value">3</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-identifier">revs</span>[<span class="ruby-value">0</span>], <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;mime_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/plain&quot;</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">revs</span>[<span class="ruby-value">1</span>], <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;mime_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/plain&quot;</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">revs</span>[<span class="ruby-value">2</span>], <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;mime_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/plain&quot;</span>)
+
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">revs</span>[<span class="ruby-value">2</span>][<span class="ruby-string">&quot;rev&quot;</span>])
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;mime_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/plain&quot;</span>)
+  <span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">metadata</span>, <span class="ruby-string">&quot;path&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;mime_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;text/plain&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_revisions_restore-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_revisions_restore-method -->
+
+    
+      <div id="method-i-test_search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_search</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_search-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_search</span>
+
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/search/&quot;</span>
+
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;text.txt&quot;</span>);
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;subFolder/text.txt&quot;</span>);
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@foo</span>, <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;subFolder/cow.txt&quot;</span>);
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;frog.jpg&quot;</span>);
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;frog2.jpg&quot;</span>);
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;subFolder/frog2.jpg&quot;</span>);
+
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;sasdfasdf&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">results</span>, [])
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;jpg&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span>, <span class="ruby-value">3</span>)
+
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">metadata</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">results</span>
+    <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">metadata</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;subFolder&quot;</span>, <span class="ruby-string">&quot;jpg&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span>, <span class="ruby-value">1</span>)
+  <span class="ruby-identifier">assert_file</span>(<span class="ruby-ivar">@frog</span>, <span class="ruby-identifier">results</span>[<span class="ruby-value">0</span>])
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_search-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_search-method -->
+
+    
+      <div id="method-i-test_share" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_share</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_share-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_share</span>
+
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/stream_song.mp3&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">link</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">shares</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">hash_has</span>(<span class="ruby-identifier">link</span>, {},
+    <span class="ruby-string">&quot;url&quot;</span>,
+    <span class="ruby-string">&quot;expires&quot;</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_share-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_share-method -->
+
+    
+      <div id="method-i-test_stream" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_stream</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_stream-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_stream</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@test_dir</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/stream_song.mp3&quot;</span>
+  <span class="ruby-identifier">upload</span>(<span class="ruby-ivar">@song</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">link</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">media</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">hash_has</span>(<span class="ruby-identifier">link</span>, {},
+    <span class="ruby-string">&quot;url&quot;</span>,
+    <span class="ruby-string">&quot;expires&quot;</span>
+  )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_stream-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_stream-method -->
+
+    
+      <div id="method-i-upload" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upload</span><span
+            class="method-args">(filename, path, overwrite=false, parent_rev=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upload-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">upload</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">overwrite</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">parent_rev</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put_file</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">open_binary</span>(<span class="ruby-identifier">filename</span>), <span class="ruby-identifier">overwrite</span>, <span class="ruby-identifier">parent_rev</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- upload-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- upload-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DropboxController - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>examples/dropbox_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ApplicationController
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-i-auth_finish">#auth_finish</a>
+    
+    <li ><a href="#method-i-auth_start">#auth_start</a>
+    
+    <li ><a href="#method-i-get_dropbox_client">#get_dropbox_client</a>
+    
+    <li ><a href="#method-i-get_web_auth">#get_web_auth</a>
+    
+    <li ><a href="#method-i-main">#main</a>
+    
+    <li ><a href="#method-i-upload">#upload</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/trusted-certs_crt.html">trusted-certs.crt</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DropboxAuthError.html">DropboxAuthError</a>
+  
+    <li><a href="./DropboxCLI.html">DropboxCLI</a>
+  
+    <li><a href="./DropboxClient.html">DropboxClient</a>
+  
+    <li><a href="./DropboxClient/ChunkedUploader.html">DropboxClient::ChunkedUploader</a>
+  
+    <li><a href="./DropboxController.html">DropboxController</a>
+  
+    <li><a href="./DropboxError.html">DropboxError</a>
+  
+    <li><a href="./DropboxNotModified.html">DropboxNotModified</a>
+  
+    <li><a href="./DropboxOAuth2Flow.html">DropboxOAuth2Flow</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadRequestError.html">DropboxOAuth2Flow::BadRequestError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadStateError.html">DropboxOAuth2Flow::BadStateError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/CsrfError.html">DropboxOAuth2Flow::CsrfError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/NotApprovedError.html">DropboxOAuth2Flow::NotApprovedError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/ProviderError.html">DropboxOAuth2Flow::ProviderError</a>
+  
+    <li><a href="./DropboxOAuth2FlowNoRedirect.html">DropboxOAuth2FlowNoRedirect</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rack.html">Rack</a>
+  
+    <li><a href="./Rack/Session.html">Rack::Session</a>
+  
+    <li><a href="./SDKTest.html">SDKTest</a>
+  
+    <li><a href="./SSLTest.html">SSLTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DropboxController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-auth_finish" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">auth_finish</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="auth_finish-source">
+            <pre><span class="ruby-comment"># File examples/dropbox_controller.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">auth_finish</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">access_token</span>, <span class="ruby-identifier">user_id</span>, <span class="ruby-identifier">url_state</span> = <span class="ruby-identifier">get_web_auth</span>.<span class="ruby-identifier">finish</span>(<span class="ruby-identifier">params</span>)
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:access_token</span>] = <span class="ruby-identifier">access_token</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;main&#39;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxOAuth2Flow</span><span class="ruby-operator">::</span><span class="ruby-constant">BadRequestError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Error in OAuth 2 flow: Bad request: #{e}&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxOAuth2Flow</span><span class="ruby-operator">::</span><span class="ruby-constant">BadStateError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Error in OAuth 2 flow: No CSRF token in session: #{e}&quot;</span>)
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;auth_start&#39;</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxOAuth2Flow</span><span class="ruby-operator">::</span><span class="ruby-constant">CsrfError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Error in OAuth 2 flow: CSRF mismatch: #{e}&quot;</span>)
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;CSRF error&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxOAuth2Flow</span><span class="ruby-operator">::</span><span class="ruby-constant">NotApprovedError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Not approved?  Why not, bro?&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxOAuth2Flow</span><span class="ruby-operator">::</span><span class="ruby-constant">ProviderError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Error in OAuth 2 flow: Error redirect from Dropbox: #{e}&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Strange error.&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Error getting OAuth 2 access token: #{e}&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Error communicating with Dropbox servers.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- auth_finish-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- auth_finish-method -->
+
+    
+      <div id="method-i-auth_start" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">auth_start</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="auth_start-source">
+            <pre><span class="ruby-comment"># File examples/dropbox_controller.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">auth_start</span>
+  <span class="ruby-identifier">authorize_url</span> = <span class="ruby-identifier">get_web_auth</span>().<span class="ruby-identifier">start</span>()
+
+  <span class="ruby-comment"># Send the user to the Dropbox website so they can authorize our app.  After the user</span>
+  <span class="ruby-comment"># authorizes our app, Dropbox will redirect them here with a &#39;code&#39; parameter.</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">authorize_url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- auth_start-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- auth_start-method -->
+
+    
+      <div id="method-i-get_dropbox_client" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_dropbox_client</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_dropbox_client-source">
+            <pre><span class="ruby-comment"># File examples/dropbox_controller.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_dropbox_client</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:access_token</span>]
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">access_token</span> = <span class="ruby-identifier">session</span>[<span class="ruby-value">:access_token</span>]
+      <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">access_token</span>)
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-comment"># Maybe something&#39;s wrong with the access token?</span>
+      <span class="ruby-identifier">session</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:access_token</span>)
+      <span class="ruby-identifier">raise</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_dropbox_client-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_dropbox_client-method -->
+
+    
+      <div id="method-i-get_web_auth" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_web_auth</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_web_auth-source">
+            <pre><span class="ruby-comment"># File examples/dropbox_controller.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_web_auth</span>()
+  <span class="ruby-identifier">redirect_uri</span> = <span class="ruby-identifier">url_for</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;auth_finish&#39;</span>)
+  <span class="ruby-constant">DropboxOAuth2Flow</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">APP_KEY</span>, <span class="ruby-constant">APP_SECRET</span>, <span class="ruby-identifier">redirect_uri</span>, <span class="ruby-identifier">session</span>, <span class="ruby-value">:dropbox_auth_csrf_token</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_web_auth-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_web_auth-method -->
+
+    
+      <div id="method-i-main" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">main</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="main-source">
+            <pre><span class="ruby-comment"># File examples/dropbox_controller.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">main</span>
+  <span class="ruby-identifier">client</span> = <span class="ruby-identifier">get_dropbox_client</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">client</span>
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;auth_start&#39;</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">account_info</span> = <span class="ruby-identifier">client</span>.<span class="ruby-identifier">account_info</span>
+
+  <span class="ruby-comment"># Show a file upload page</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:inline</span> =<span class="ruby-operator">&gt;</span>
+    <span class="ruby-node">&quot;#{account_info[&#39;email&#39;]} &lt;br/&gt;&lt;%= form_tag({:action =&gt; :upload}, :multipart =&gt; true) do %&gt;&lt;%= file_field_tag &#39;file&#39; %&gt;&lt;%= submit_tag &#39;Upload&#39; %&gt;&lt;% end %&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- main-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- main-method -->
+
+    
+      <div id="method-i-upload" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upload</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upload-source">
+            <pre><span class="ruby-comment"># File examples/dropbox_controller.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">upload</span>
+  <span class="ruby-identifier">client</span> = <span class="ruby-identifier">get_dropbox_client</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">client</span>
+    <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;auth_start&#39;</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment"># Upload the POST&#39;d file to Dropbox, keeping the same name</span>
+    <span class="ruby-identifier">resp</span> = <span class="ruby-identifier">client</span>.<span class="ruby-identifier">put_file</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">original_filename</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">read</span>)
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Upload successful.  File now at #{resp[&#39;path&#39;]}&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxAuthError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">session</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:access_token</span>)  <span class="ruby-comment"># An auth error means the access token is probably bad</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Dropbox auth error: #{e}&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Dropbox auth error&quot;</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DropboxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Dropbox API error: #{e}&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Dropbox API error&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- upload-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- upload-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

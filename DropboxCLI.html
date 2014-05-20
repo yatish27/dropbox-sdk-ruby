@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DropboxCLI - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>examples/cli_example.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-clean_up">#clean_up</a>
+    
+    <li ><a href="#method-i-command_loop">#command_loop</a>
+    
+    <li ><a href="#method-i-cp">#cp</a>
+    
+    <li ><a href="#method-i-execute_dropbox_command">#execute_dropbox_command</a>
+    
+    <li ><a href="#method-i-get">#get</a>
+    
+    <li ><a href="#method-i-help">#help</a>
+    
+    <li ><a href="#method-i-info">#info</a>
+    
+    <li ><a href="#method-i-login">#login</a>
+    
+    <li ><a href="#method-i-logout">#logout</a>
+    
+    <li ><a href="#method-i-ls">#ls</a>
+    
+    <li ><a href="#method-i-mkdir">#mkdir</a>
+    
+    <li ><a href="#method-i-mv">#mv</a>
+    
+    <li ><a href="#method-i-put">#put</a>
+    
+    <li ><a href="#method-i-rm">#rm</a>
+    
+    <li ><a href="#method-i-search">#search</a>
+    
+    <li ><a href="#method-i-thumbnail">#thumbnail</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/trusted-certs_crt.html">trusted-certs.crt</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DropboxAuthError.html">DropboxAuthError</a>
+  
+    <li><a href="./DropboxCLI.html">DropboxCLI</a>
+  
+    <li><a href="./DropboxClient.html">DropboxClient</a>
+  
+    <li><a href="./DropboxClient/ChunkedUploader.html">DropboxClient::ChunkedUploader</a>
+  
+    <li><a href="./DropboxController.html">DropboxController</a>
+  
+    <li><a href="./DropboxError.html">DropboxError</a>
+  
+    <li><a href="./DropboxNotModified.html">DropboxNotModified</a>
+  
+    <li><a href="./DropboxOAuth2Flow.html">DropboxOAuth2Flow</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadRequestError.html">DropboxOAuth2Flow::BadRequestError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadStateError.html">DropboxOAuth2Flow::BadStateError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/CsrfError.html">DropboxOAuth2Flow::CsrfError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/NotApprovedError.html">DropboxOAuth2Flow::NotApprovedError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/ProviderError.html">DropboxOAuth2Flow::ProviderError</a>
+  
+    <li><a href="./DropboxOAuth2FlowNoRedirect.html">DropboxOAuth2FlowNoRedirect</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rack.html">Rack</a>
+  
+    <li><a href="./Rack/Session.html">Rack::Session</a>
+  
+    <li><a href="./SDKTest.html">SDKTest</a>
+  
+    <li><a href="./SSLTest.html">SSLTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DropboxCLI</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="LOGIN_REQUIRED">LOGIN_REQUIRED
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">APP_KEY</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span> <span class="ruby-keyword">or</span> <span class="ruby-constant">APP_SECRET</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You must set your APP_KEY and APP_SECRET in cli_example.rb!&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Find this in your apps page at https://www.dropbox.com/developers/&quot;</span>
+    <span class="ruby-identifier">exit</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@client</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-clean_up" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clean_up</span><span
+            class="method-args">(str)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="clean_up-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^\/+/</span>, <span class="ruby-string">&#39;&#39;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">str</span>
+  <span class="ruby-identifier">str</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- clean_up-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- clean_up-method -->
+
+    
+      <div id="method-i-command_loop" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">command_loop</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="command_loop-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_loop</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Enter a command or &#39;help&#39; or &#39;exit&#39;&quot;</span>
+  <span class="ruby-identifier">command_line</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">command_line</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;exit&#39;</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">execute_dropbox_command</span>(<span class="ruby-identifier">command_line</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RuntimeError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Command Line Error! #{e.class}: #{e}&quot;</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&#39;&gt; &#39;</span>
+    <span class="ruby-identifier">command_line</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;goodbye&#39;</span>
+  <span class="ruby-identifier">exit</span>(<span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- command_loop-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- command_loop-method -->
+
+    
+      <div id="method-i-cp" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cp</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cp-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cp</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">src</span> = <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-identifier">dest</span> = <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">2</span>])
+  <span class="ruby-identifier">pp</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_copy</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cp-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cp-method -->
+
+    
+      <div id="method-i-execute_dropbox_command" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">execute_dropbox_command</span><span
+            class="method-args">(cmd_line)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="execute_dropbox_command-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">execute_dropbox_command</span>(<span class="ruby-identifier">cmd_line</span>)
+  <span class="ruby-identifier">command</span> = <span class="ruby-constant">Shellwords</span>.<span class="ruby-identifier">shellwords</span> <span class="ruby-identifier">cmd_line</span>
+  <span class="ruby-identifier">method</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">LOGIN_REQUIRED</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">method</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@client</span>
+      <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">command</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;must be logged in; type \login\ to get started.&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> [<span class="ruby-string">&#39;login&#39;</span>, <span class="ruby-string">&#39;help&#39;</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">method</span>
+    <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">command</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">command</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;invalid command. type \help\ to see commands.&#39;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- execute_dropbox_command-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- execute_dropbox_command-method -->
+
+    
+      <div id="method-i-get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">dest</span> = <span class="ruby-identifier">command</span>[<span class="ruby-value">2</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;please specify item to get&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">dest</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">dest</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;please specify full local path to dest, i.e. the file to write to&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">dest</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;error: File #{dest} already exists.&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">src</span> = <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>])
+    <span class="ruby-identifier">out</span>,<span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get_file_and_metadata</span>(<span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">src</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Metadata:&quot;</span>
+    <span class="ruby-identifier">pp</span> <span class="ruby-identifier">metadata</span>
+    <span class="ruby-identifier">open</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-string">&#39;w&#39;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">out</span> }
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;wrote file #{dest}.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get-method -->
+
+    
+      <div id="method-i-help" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">help</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="help-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">help</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;commands are: login #{LOGIN_REQUIRED.join(&#39; &#39;)} help exit&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- help-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- help-method -->
+
+    
+      <div id="method-i-info" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">info</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="info-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">info</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">pp</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">account_info</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- info-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- info-method -->
+
+    
+      <div id="method-i-login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="login-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;already logged in!&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">web_auth</span> = <span class="ruby-constant">DropboxOAuth2FlowNoRedirect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">APP_KEY</span>, <span class="ruby-constant">APP_SECRET</span>)
+    <span class="ruby-identifier">authorize_url</span> = <span class="ruby-identifier">web_auth</span>.<span class="ruby-identifier">start</span>()
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;1. Go to: #{authorize_url}&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;2. Click \&quot;Allow\&quot; (you might have to log in first).&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;3. Copy the authorization code.&quot;</span>
+
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Enter the authorization code here: &quot;</span>
+    <span class="ruby-constant">STDOUT</span>.<span class="ruby-identifier">flush</span>
+    <span class="ruby-identifier">auth_code</span> = <span class="ruby-constant">STDIN</span>.<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+
+    <span class="ruby-identifier">access_token</span>, <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">web_auth</span>.<span class="ruby-identifier">finish</span>(<span class="ruby-identifier">auth_code</span>)
+
+    <span class="ruby-ivar">@client</span> = <span class="ruby-constant">DropboxClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">access_token</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;You are logged in.  Your access token is #{access_token}.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- login-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- login-method -->
+
+    
+      <div id="method-i-logout" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">logout</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="logout-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logout</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-ivar">@client</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You are logged out.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- logout-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- logout-method -->
+
+    
+      <div id="method-i-ls" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ls</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="ls-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ls</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>] = <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;&#39;</span>)
+  <span class="ruby-identifier">resp</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>])
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">resp</span>[<span class="ruby-string">&#39;contents&#39;</span>].<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">item</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">resp</span>[<span class="ruby-string">&#39;contents&#39;</span>]
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">item</span>[<span class="ruby-string">&#39;path&#39;</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ls-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ls-method -->
+
+    
+      <div id="method-i-mkdir" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mkdir</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="mkdir-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">pp</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_create_folder</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mkdir-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mkdir-method -->
+
+    
+      <div id="method-i-mv" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mv</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="mv-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mv</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">src</span> = <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-identifier">dest</span> = <span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">2</span>])
+  <span class="ruby-identifier">pp</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_move</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mv-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mv-method -->
+
+    
+      <div id="method-i-put" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">put</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="put-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">fname</span> = <span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>]
+
+  <span class="ruby-comment">#If the user didn&#39;t specifiy the file name, just use the name of the file on disk</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">command</span>[<span class="ruby-value">2</span>]
+    <span class="ruby-identifier">new_name</span> = <span class="ruby-identifier">command</span>[<span class="ruby-value">2</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">new_name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">fname</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fname</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">fname</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">fname</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-constant">File</span>.<span class="ruby-identifier">ftype</span>(<span class="ruby-identifier">fname</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&#39;file&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">stat</span>(<span class="ruby-identifier">fname</span>).<span class="ruby-identifier">readable?</span>
+    <span class="ruby-comment">#This is where we call the the Dropbox Client</span>
+    <span class="ruby-identifier">pp</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put_file</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">open</span>(<span class="ruby-identifier">fname</span>))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;couldn&#39;t find the file #{ fname }&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- put-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- put-method -->
+
+    
+      <div id="method-i-rm" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rm</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="rm-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rm</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">pp</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">file_delete</span>(<span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>]))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rm-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rm-method -->
+
+    
+      <div id="method-i-search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="search-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">resp</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;/&#39;</span>,<span class="ruby-identifier">clean_up</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>]))
+
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">item</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">resp</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">item</span>[<span class="ruby-string">&#39;path&#39;</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- search-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- search-method -->
+
+    
+      <div id="method-i-thumbnail" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">thumbnail</span><span
+            class="method-args">(command)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Example: &gt; thumbnail pic1.jpg ~/pic1-local.jpg large</p>
+          
+          
+
+          
+          <div class="method-source-code" id="thumbnail-source">
+            <pre><span class="ruby-comment"># File examples/cli_example.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">thumbnail</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-identifier">dest</span> = <span class="ruby-identifier">command</span>[<span class="ruby-value">2</span>]
+  <span class="ruby-identifier">command</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">||=</span> <span class="ruby-string">&#39;small&#39;</span>
+  <span class="ruby-identifier">out</span>,<span class="ruby-identifier">metadata</span> = <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">thumbnail_and_metadata</span>(<span class="ruby-identifier">command</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">command</span>[<span class="ruby-value">3</span>])
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Metadata:&quot;</span>
+  <span class="ruby-identifier">pp</span> <span class="ruby-identifier">metadata</span>
+  <span class="ruby-identifier">open</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-string">&#39;w&#39;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">out</span> }
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;wrote thumbnail#{dest}.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- thumbnail-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- thumbnail-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>CHANGELOG - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./lib/trusted-certs_crt.html">trusted-certs.crt</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DropboxAuthError.html">DropboxAuthError</a>
+  
+    <li><a href="./DropboxCLI.html">DropboxCLI</a>
+  
+    <li><a href="./DropboxClient.html">DropboxClient</a>
+  
+    <li><a href="./DropboxClient/ChunkedUploader.html">DropboxClient::ChunkedUploader</a>
+  
+    <li><a href="./DropboxController.html">DropboxController</a>
+  
+    <li><a href="./DropboxError.html">DropboxError</a>
+  
+    <li><a href="./DropboxNotModified.html">DropboxNotModified</a>
+  
+    <li><a href="./DropboxOAuth2Flow.html">DropboxOAuth2Flow</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadRequestError.html">DropboxOAuth2Flow::BadRequestError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/BadStateError.html">DropboxOAuth2Flow::BadStateError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/CsrfError.html">DropboxOAuth2Flow::CsrfError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/NotApprovedError.html">DropboxOAuth2Flow::NotApprovedError</a>
+  
+    <li><a href="./DropboxOAuth2Flow/ProviderError.html">DropboxOAuth2Flow::ProviderError</a>
+  
+    <li><a href="./DropboxOAuth2FlowNoRedirect.html">DropboxOAuth2FlowNoRedirect</a>
+  
+    <li><a href="./Gem.html">Gem</a>
+  
+    <li><a href="./Node.html">Node</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Rack.html">Rack</a>
+  
+    <li><a href="./Rack/Session.html">Rack::Session</a>
+  
+    <li><a href="./SDKTest.html">SDKTest</a>
+  
+    <li><a href="./SSLTest.html">SSLTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>1.6.4 (2014-4-12)</p>
+<ul><li>
+<p>Bugfixes</p>
+</li><li>
+<p>Update gemspec to include all examples</p>
+</li><li>
+<p>Release tests and other internal scripts</p>
+</li></ul>
+
+<p>1.6.3 (2013-12-11)</p>
+<ul><li>
+<p>Stricter SSL: Update certs, use only approved ciphersuites, work around
+Ruby SSL bugs.</p>
+</li><li>
+<p>Upgrade OAuth 1 tokens with <a
+href="DropboxClient.html#method-i-create_oauth2_access_token">DropboxClient#create_oauth2_access_token</a>
+and DropboxClient.disable_oauth2_access_token.</p>
+</li><li>
+<p>delta(): Add support for “path_prefix” parameter.</p>
+</li></ul>
+
+<p>1.6.2 (2013-10-10)</p>
+<ul><li>
+<p>Put params in body for POST requests (they were being put in the URL).
+Fixes bug with /delta and really long cursors.</p>
+</li></ul>
+
+<p>1.6.1 (2013-07-08)</p>
+<ul><li>
+<p>Fixed syntax error (Ruby 1.8.7 didn&#39;t mind, but Ruby 1.9 did).</p>
+</li></ul>
+
+<p>1.6 (2013-07-07)</p>
+<ul><li>
+<p>Added OAuth 2 support (DropboxOAuth2Flow).  OAuth 1 still works.</p>
+</li><li>
+<p>Fixed many minor bugs.</p>
+</li></ul>
+
+<p>1.5.1 (2012-8-20)</p>
+<ul><li>
+<p>Fixed packaging.</p>
+</li></ul>
+
+<p>1.5 (2012-8-15)</p>
+<ul><li>
+<p>Support for uploading large files via /chunked_upload</p>
+</li></ul>
+
+<p>1.3.1 (2012-5-16)</p>
+<ul><li>
+<p>Increase metadata() file list limit to 25,000 (used to be 10,000).</p>
+</li><li>
+<p>Use CGI.escape() instead of the deprecated URI.escape().</p>
+</li></ul>
+
+<p>1.3 (2012-3-26)</p>
+<ul><li>
+<p>Add support for the /delta API.</p>
+</li><li>
+<p>Add support for the “copy ref” API.</p>
+</li></ul>
+
+<p>1.2 (2012-1-11)</p>
+<ul><li>
+<p>Adds a method to the SDK that returns the file metadata when downloading a
+file or its thumbnail.</p>
+</li><li>
+<p>Validate server&#39;s SSL certificate against CAs in included certificate
+file.</p>
+</li></ul>
+
+<p>1.1 (2011-10-17)</p>
+<ul><li>
+<p>Various bug fixes found during beta period</p>
+</li><li>
+<p>Improved documentation</p>
+</li><li>
+<p>Improved module structure</p>
+</li><li>
+<p>Removed dependency on the oauth module, using plaintext authentication over
+https</p>
+</li></ul>
+
+<p>1.0 (2011-8-16)</p>
+<ul><li>
+<p>Backwards compatibility broken</p>
+
+<pre>- Changed interface
+- Change &#39;sandbox&#39; references to &#39;app_folder&#39;</pre>
+</li><li>
+<p>Updated SDK to Dropbox API Version 1, supporting all calls</p>
+
+<pre>- Added &#39;rev&#39; parameter to metadata and get_file
+- Added &#39;parent_rev&#39; parameter to put_file
+- Added search, share, media, revisions, and restore
+- put_file uses /files_put instead of multipart POST
+- Removed methods for calls that were removed from v1 of the REST API</pre>
+</li><li>
+<p>Changed return format for calls</p>
+
+<pre>- On error (non-200 response), an exception is raised
+- On success, the JSON is parsed and a Hash is returned</pre>
+</li><li>
+<p>Updated examples</p>
+
+<pre>- Improved CLI example
+- Added a Ruby on Rails 3 controller example
+- Added a web based file browser/uploader that uses Sinatra</pre>
+</li><li>
+<p>put_file no longer takes a “name” arugment, only takes a full path</p>
+</li><li>
+<p>Removed reliance on config files</p>
+</li><li>
+<p>Assorted bugfixes and improvements</p>
+</li><li>
+<p>All calls are now made over SSL</p>
+</li><li>
+<p>Fully documented code for RDoc generation</p>
+</li><li>
+<p>Added a <a href="CHANGELOG.html">CHANGELOG</a></p>
+</li></ul>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

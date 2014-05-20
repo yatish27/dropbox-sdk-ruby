@@ -1,0 +1,18 @@
+Tue, 20 May 2014 11:27:32 -0700
+./CHANGELOG	Fri, 16 May 2014 14:04:41 -0700
+./doc/created.rid	Tue, 20 May 2014 11:27:32 -0700
+./examples/chunked_upload.rb	Fri, 16 May 2014 14:04:41 -0700
+./examples/cli_example.rb	Fri, 16 May 2014 14:04:41 -0700
+./examples/copy_between_accounts.rb	Fri, 16 May 2014 14:04:41 -0700
+./examples/dropbox_controller.rb	Fri, 16 May 2014 14:04:41 -0700
+./examples/oauth1_upgrade.rb	Fri, 16 May 2014 14:04:41 -0700
+./examples/run_patched	Fri, 16 May 2014 14:04:41 -0700
+./examples/search_cache.rb	Fri, 16 May 2014 14:04:41 -0700
+./examples/web_file_browser.rb	Fri, 16 May 2014 14:04:41 -0700
+./gemspec.rb	Fri, 16 May 2014 14:04:41 -0700
+./lib/dropbox_sdk.rb	Fri, 16 May 2014 14:48:52 -0700
+./lib/trusted-certs.crt	Fri, 16 May 2014 14:04:41 -0700
+./LICENSE	Fri, 16 May 2014 14:04:41 -0700
+./README	Fri, 16 May 2014 14:04:41 -0700
+./test/sdk_test.rb	Fri, 16 May 2014 14:04:41 -0700
+./test/ssl_test.rb	Fri, 16 May 2014 14:04:41 -0700
