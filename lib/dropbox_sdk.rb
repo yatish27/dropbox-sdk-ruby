@@ -1213,14 +1213,16 @@ class DropboxClient
   #
   # Arguments:
   # * path: The file to share.
+  # * short_url: When true (default), the url returned will be shortened using the Dropbox url shortener. If false,
+  #   the url will link directly to the file's preview page.
   #
   # Returns:
   # * A Hash object that looks like the following example:
   #      {'url': 'https://db.tt/c0mFuu1Y', 'expires': 'Tue, 01 Jan 2030 00:00:00 +0000'}
   #   For a detailed description of what this call returns, visit:
   #    https://www.dropbox.com/developers/reference/api#shares
-  def shares(path)
-    response = @session.do_get "/shares/#{@root}#{format_path(path)}"
+  def shares(path, short_url=true)
+    response = @session.do_get "/shares/#{@root}#{format_path(path)}", {"short_url"=>short_url}
     Dropbox::parse_response(response)
   end
 
