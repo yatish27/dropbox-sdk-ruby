@@ -1,4 +1,7 @@
-# Build with: gem build gemspec.rb
+# Build a gem for RubyGems.org with user dropbox-api-team
+# gem build gemspec.rb
+# gem push dropbox-sdk-x.x.x.gem
+
 Gem::Specification.new do |s|
   s.name = "dropbox-sdk"
 
