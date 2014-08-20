@@ -1118,6 +1118,7 @@ class DropboxClient
       "include_deleted" => include_deleted.to_s,
       "hash" => hash,
       "rev" => rev,
+      "include_media_info" => true
     }
 
     response = @session.do_get "/metadata/#{@root}#{format_path(path)}", params
