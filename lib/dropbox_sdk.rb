@@ -1106,7 +1106,7 @@ class DropboxClient
   #   This parameter only applies for files. If omitted, you'll receive
   #   the most recent revision metadata.
   # * include_deleted: Specifies whether to include deleted files in metadata results.
-  * * include_media_info: Specifies to include media info, such as time_taken for photos
+  # * include_media_info: Specifies to include media info, such as time_taken for photos
   #
   # Returns:
   # * A Hash object with the metadata of the file or folder (and contained files if
