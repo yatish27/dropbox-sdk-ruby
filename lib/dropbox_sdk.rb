@@ -1112,7 +1112,7 @@ class DropboxClient
   # * A Hash object with the metadata of the file or folder (and contained files if
   #   appropriate).  For a detailed description of what this call returns, visit:
   #   https://www.dropbox.com/developers/reference/api#metadata
-  def metadata(path, file_limit=25000, list=true, hash=nil, rev=nil, include_deleted=false, include_media_info=true)
+  def metadata(path, file_limit=25000, list=true, hash=nil, rev=nil, include_deleted=false, include_media_info=false)
     params = {
       "file_limit" => file_limit.to_s,
       "list" => list.to_s,
