@@ -119,7 +119,7 @@ class DropboxCLI
       out,metadata = @client.get_file_and_metadata('/' + src)
       puts "Metadata:"
       pp metadata
-      open(dest, 'w'){|f| f.puts out }
+      open(dest, 'w'){|f| f.write out }
       puts "wrote file #{dest}."
     end
   end
@@ -136,7 +136,7 @@ class DropboxCLI
     out,metadata = @client.thumbnail_and_metadata(command[1], command[3])
     puts "Metadata:"
     pp metadata
-    open(dest, 'w'){|f| f.puts out }
+    open(dest, 'w'){|f| f.write out }
     puts "wrote thumbnail#{dest}."
   end
 
