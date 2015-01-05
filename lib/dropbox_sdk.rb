@@ -19,14 +19,14 @@ module Dropbox # :nodoc:
 
   def self.clean_params(params)
     r = {}
-    params.each do |k,v|
+    params.each do |k, v|
       r[k] = v.to_s if not v.nil?
     end
     r
   end
 
   def self.make_query_string(params)
-    clean_params(params).collect {|k,v|
+    clean_params(params).collect {|k, v|
       CGI.escape(k) + "=" + CGI.escape(v)
     }.join("&")
   end
@@ -43,24 +43,24 @@ module Dropbox # :nodoc:
       # SSL protocol and ciphersuite settings are supported strating with version 1.9
       http.ssl_version = 'TLSv1'
       http.ciphers = 'ECDHE-RSA-AES256-GCM-SHA384:'\
-            'ECDHE-RSA-AES256-SHA384:'\
-            'ECDHE-RSA-AES256-SHA:'\
-            'ECDHE-RSA-AES128-GCM-SHA256:'\
-            'ECDHE-RSA-AES128-SHA256:'\
-            'ECDHE-RSA-AES128-SHA:'\
-            'ECDHE-RSA-RC4-SHA:'\
-            'DHE-RSA-AES256-GCM-SHA384:'\
-            'DHE-RSA-AES256-SHA256:'\
-            'DHE-RSA-AES256-SHA:'\
-            'DHE-RSA-AES128-GCM-SHA256:'\
-            'DHE-RSA-AES128-SHA256:'\
-            'DHE-RSA-AES128-SHA:'\
-            'AES256-GCM-SHA384:'\
-            'AES256-SHA256:'\
-            'AES256-SHA:'\
-            'AES128-GCM-SHA256:'\
-            'AES128-SHA256:'\
-            'AES128-SHA'
+        'ECDHE-RSA-AES256-SHA384:'\
+        'ECDHE-RSA-AES256-SHA:'\
+        'ECDHE-RSA-AES128-GCM-SHA256:'\
+        'ECDHE-RSA-AES128-SHA256:'\
+        'ECDHE-RSA-AES128-SHA:'\
+        'ECDHE-RSA-RC4-SHA:'\
+        'DHE-RSA-AES256-GCM-SHA384:'\
+        'DHE-RSA-AES256-SHA256:'\
+        'DHE-RSA-AES256-SHA:'\
+        'DHE-RSA-AES128-GCM-SHA256:'\
+        'DHE-RSA-AES128-SHA256:'\
+        'DHE-RSA-AES128-SHA:'\
+        'AES256-GCM-SHA384:'\
+        'AES256-SHA256:'\
+        'AES256-SHA:'\
+        'AES128-GCM-SHA256:'\
+        'AES128-SHA256:'\
+        'AES128-SHA'
     end
 
     # Important security note!
@@ -92,18 +92,18 @@ module Dropbox # :nodoc:
       http.request(request)
     rescue OpenSSL::SSL::SSLError => e
       raise DropboxError.new("SSL error connecting to Dropbox.  " +
-                   "There may be a problem with the set of certificates in \"#{Dropbox::TRUSTED_CERT_FILE}\".  #{e.message}")
+                             "There may be a problem with the set of certificates in \"#{Dropbox::TRUSTED_CERT_FILE}\".  #{e.message}")
     end
   end
 
   # Parse response. You probably shouldn't be calling this directly.  This takes responses from the server
   # and parses them.  It also checks for errors and raises exceptions with the appropriate messages.
   def self.parse_response(response, raw=false) # :nodoc:
-    if response.kind_of?(Net::HTTPServerError)
+    if response.is_a?(Net::HTTPServerError)
       raise DropboxError.new("Dropbox Server Error: #{response} - #{response.body}", response)
-    elsif response.kind_of?(Net::HTTPUnauthorized)
+    elsif response.is_a?(Net::HTTPUnauthorized)
       raise DropboxAuthError.new("User is not authenticated.", response)
-    elsif not response.kind_of?(Net::HTTPSuccess)
+    elsif !response.is_a?(Net::HTTPSuccess)
       begin
         d = JSON.parse(response.body)
       rescue
@@ -172,7 +172,7 @@ class DropboxSessionBase # :nodoc:
 
   public
 
-  def do_get(path, params=nil, headers=nil, content_server=false)  # :nodoc:
+  def do_get(path, params=nil, content_server=false)  # :nodoc:
     params ||= {}
     assert_authorized
     uri = build_url_with_params(path, params, content_server)
@@ -247,7 +247,7 @@ class DropboxSession < DropboxSessionBase  # :nodoc:
     header
   end
 
-  def do_get_with_token(url, token, headers=nil) # :nodoc:
+  def do_get_with_token(url, token) # :nodoc:
     uri = URI.parse(url)
     request = Net::HTTP::Get.new(uri.request_uri)
     request.add_field('Authorization', build_auth_header(token))
@@ -592,7 +592,7 @@ class DropboxOAuth2Flow < DropboxOAuth2FlowBase
 
     if not error.nil? and not code.nil?
       raise BadRequestError.new("Query parameters 'code' and 'error' are both set;" +
-                    " only one must be set.")
+                                " only one must be set.")
     end
     if error.nil? and code.nil?
       raise BadRequestError.new("Neither query parameter 'code' or 'error' is set.")
@@ -616,7 +616,7 @@ class DropboxOAuth2Flow < DropboxOAuth2FlowBase
     end
     if not Dropbox::safe_string_equals(csrf_token_from_session, given_csrf_token)
       raise CsrfError.new("Expected #{csrf_token_from_session.inspect}, " +
-                  "got #{given_csrf_token.inspect}.")
+                          "got #{given_csrf_token.inspect}.")
     end
     @session.delete(@csrf_token_session_key)
 
@@ -674,17 +674,10 @@ end
 
 # A class that represents either an OAuth request token or an OAuth access token.
 class OAuthToken # :nodoc:
+  attr_reader :key, :secret
   def initialize(key, secret)
     @key = key
     @secret = secret
-  end
-
-  def key
-    @key
-  end
-
-  def secret
-    @secret
   end
 end
 
@@ -772,7 +765,7 @@ class DropboxClient
   def create_oauth2_access_token
     if not @session.is_a?(DropboxSession)
       raise ArgumentError.new("This call requires a DropboxClient that is configured with " \
-                  "an OAuth 1 access token.")
+                              "an OAuth 1 access token.")
     end
     response = @session.do_post "/oauth2/token_from_oauth1"
     Dropbox::parse_response(response)['access_token']
@@ -921,9 +914,9 @@ class DropboxClient
   def commit_chunked_upload(to_path, upload_id, overwrite=false, parent_rev=nil)  #:nodoc
     path = "/commit_chunked_upload/#{@root}#{format_path(to_path)}"
     params = {'overwrite' => overwrite.to_s,
-          'upload_id' => upload_id,
-          'parent_rev' => parent_rev,
-        }
+              'upload_id' => upload_id,
+              'parent_rev' => parent_rev
+    }
     headers = nil
     content_server = true
     @session.do_post path, params, headers, content_server
@@ -981,9 +974,8 @@ class DropboxClient
     params = {
       'rev' => rev,
     }
-    headers = nil
     content_server = true
-    @session.do_get path, params, headers, content_server
+    @session.do_get path, params, content_server
   end
   private :get_file_impl
 
@@ -1000,9 +992,9 @@ class DropboxClient
       metadata = JSON.parse(raw_metadata)
     rescue
       raise DropboxError.new("Dropbox Server Error: x-dropbox-metadata=#{raw_metadata}",
-                   dropbox_raw_response)
+                             dropbox_raw_response)
     end
-    return metadata
+    metadata
   end
   private :parse_metadata
 
@@ -1371,8 +1363,8 @@ class DropboxClient
   # * A hash with the metadata of the new file.
   def add_copy_ref(to_path, copy_ref)
     params = {'from_copy_ref' => copy_ref,
-          'to_path' => "#{to_path}",
-          'root' => @root}
+              'to_path' => "#{to_path}",
+              'root' => @root}
 
     response = @session.do_post "/fileops/copy", params
     Dropbox::parse_response(response)
