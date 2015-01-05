@@ -427,11 +427,11 @@ class DropboxOAuth2FlowBase  # :nodoc:
 
   def _get_authorize_url(redirect_uri, state)
     params = {
-      "client_id" => @consumer_key,
+      "client_id"     => @consumer_key,
       "response_type" => "code",
-      "redirect_uri" => redirect_uri,
-      "state" => state,
-      "locale" => @locale,
+      "redirect_uri"  => redirect_uri,
+      "state"         => state,
+      "locale"        => @locale
     }
 
     host = Dropbox::WEB_SERVER
@@ -456,10 +456,10 @@ class DropboxOAuth2FlowBase  # :nodoc:
     request.add_field('Authorization', 'Basic ' + Base64.encode64(client_credentials).chomp("\n"))
 
     params = {
-      "grant_type" => "authorization_code",
-      "code" => code,
+      "grant_type"   => "authorization_code",
+      "code"         => code,
       "redirect_uri" => original_redirect_uri,
-      "locale" => @locale,
+      "locale"       => @locale,
     }
 
     request.set_form_data(Dropbox::clean_params(params))
@@ -674,17 +674,11 @@ end
 
 # A class that represents either an OAuth request token or an OAuth access token.
 class OAuthToken # :nodoc:
+  attr_reader :key, :secret
+
   def initialize(key, secret)
     @key = key
     @secret = secret
-  end
-
-  def key
-    @key
-  end
-
-  def secret
-    @secret
   end
 end
 
@@ -932,7 +926,7 @@ class DropboxClient
   def partial_chunked_upload(data, upload_id=nil, offset=nil)  #:nodoc
     params = {
       'upload_id' => upload_id,
-      'offset' => offset,
+      'offset'    => offset,
     }
     headers = {'Content-Type' => "application/octet-stream"}
     content_server = true
@@ -1002,7 +996,7 @@ class DropboxClient
       raise DropboxError.new("Dropbox Server Error: x-dropbox-metadata=#{raw_metadata}",
                    dropbox_raw_response)
     end
-    return metadata
+    metadata
   end
   private :parse_metadata
 
@@ -1022,9 +1016,9 @@ class DropboxClient
   #   https://www.dropbox.com/developers/reference/api#fileops-copy
   def file_copy(from_path, to_path)
     params = {
-      "root" => @root,
+      "root"      => @root,
       "from_path" => format_path(from_path, false),
-      "to_path" => format_path(to_path, false),
+      "to_path"   => format_path(to_path, false),
     }
     response = @session.do_post "/fileops/copy", params
     Dropbox::parse_response(response)
@@ -1080,9 +1074,9 @@ class DropboxClient
   #    https://www.dropbox.com/developers/reference/api#fileops-delete
   def file_move(from_path, to_path)
     params = {
-      "root" => @root,
+      "root"      => @root,
       "from_path" => format_path(from_path, false),
-      "to_path" => format_path(to_path, false),
+      "to_path"   => format_path(to_path, false),
     }
     response = @session.do_post "/fileops/move", params
     Dropbox::parse_response(response)
@@ -1114,11 +1108,11 @@ class DropboxClient
   #   https://www.dropbox.com/developers/reference/api#metadata
   def metadata(path, file_limit=25000, list=true, hash=nil, rev=nil, include_deleted=false, include_media_info=false)
     params = {
-      "file_limit" => file_limit.to_s,
-      "list" => list.to_s,
-      "include_deleted" => include_deleted.to_s,
-      "hash" => hash,
-      "rev" => rev,
+      "file_limit"         => file_limit.to_s,
+      "list"               => list.to_s,
+      "include_deleted"    => include_deleted.to_s,
+      "hash"               => hash,
+      "rev"                => rev,
       "include_media_info" => include_media_info
     }
 
@@ -1145,8 +1139,8 @@ class DropboxClient
   #   https://www.dropbox.com/developers/reference/api#search
   def search(path, query, file_limit=1000, include_deleted=false)
     params = {
-      'query' => query,
-      'file_limit' => file_limit.to_s,
+      'query'           => query,
+      'file_limit'      => file_limit.to_s,
       'include_deleted' => include_deleted.to_s
     }
 
@@ -1246,7 +1240,7 @@ class DropboxClient
   # * The thumbnail data
   def thumbnail(from_path, size='large')
     response = thumbnail_impl(from_path, size)
-    Dropbox::parse_response(response, raw=true)
+    Dropbox::parse_response(response, true)
   end
 
   # Download a thumbnail for an image along with the image's metadata.
@@ -1262,7 +1256,7 @@ class DropboxClient
     response = thumbnail_impl(from_path, size)
     parsed_response = Dropbox::parse_response(response, raw=true)
     metadata = parse_metadata(response)
-    return parsed_response, metadata
+    parsed_response, metadata
   end
 
   # A way of letting you keep a local representation of the Dropbox folder
@@ -1316,7 +1310,7 @@ class DropboxClient
   # the actual path.  The _metadata_ dicts have the original, case-preserved path.
   def delta(cursor=nil, path_prefix=nil)
     params = {
-      'cursor' => cursor,
+      'cursor'      => cursor,
       'path_prefix' => path_prefix,
     }
 
@@ -1371,8 +1365,8 @@ class DropboxClient
   # * A hash with the metadata of the new file.
   def add_copy_ref(to_path, copy_ref)
     params = {'from_copy_ref' => copy_ref,
-          'to_path' => "#{to_path}",
-          'root' => @root}
+              'to_path'       => "#{to_path}",
+              'root'          => @root}
 
     response = @session.do_post "/fileops/copy", params
     Dropbox::parse_response(response)
